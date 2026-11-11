@@ -1,0 +1,69 @@
+
+erDiagram
+
+    PLANT_OWNERS ||--o{ APPLICATIONS : ""
+    PLANT_OPERATORS ||--o{ APPLICATIONS : ""
+    INSTALLERS ||--o{ APPLICATIONS : ""
+    PLANT_ADDRESSES ||--o{ APPLICATIONS : ""
+
+    PLANT_OWNERS {
+        varchar first_name
+        varchar last_name
+        varchar street
+        varchar house_number
+        varchar postal_code
+        varchar city
+        varchar phone
+        varchar email
+    }
+
+    PLANT_OPERATORS {
+
+        varchar first_name
+        varchar last_name
+        varchar street
+        varchar house_number
+        varchar postal_code
+        varchar city
+        varchar phone
+        varchar email
+    }
+
+    INSTALLERS {
+  
+        varchar company_name
+        varchar city
+        varchar registration_number
+    }
+
+    PLANT_ADDRESSES {
+   
+        varchar first_name
+        varchar last_name
+        varchar street
+        varchar house_number
+        varchar postal_code
+        varchar city
+        varchar phone
+        varchar email
+    }
+
+    APPLICATIONS {
+        uuid id 
+        uuid owner_id 
+        uuid operator_id 
+        uuid installer_id 
+        uuid plant_address_id
+
+        varchar system_type
+
+        boolean grid_application_attached
+        boolean site_plan_attached
+        boolean data_sheet_attached
+        boolean unit_certificate_available
+        boolean na_certificate_attached
+        boolean power_flow_certificate_attached
+        boolean circuit_diagram_attached
+
+        date planned_commissioning_date
+    }

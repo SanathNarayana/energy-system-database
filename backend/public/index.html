@@ -1,0 +1,837 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Energy System Database | Registration</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: #f3f6fa;
+      color: #172b4d;
+      font-family: Arial, sans-serif;
+      line-height: 1.5;
+    }
+
+    header {
+      background: #102a43;
+      color: white;
+      padding: 24px 5%;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 30px;
+    }
+
+    header p {
+      margin: 5px 0 0;
+      color: #cbd5e1;
+    }
+
+    main {
+      max-width: 1050px;
+      margin: 32px auto;
+      padding: 0 18px;
+    }
+
+    .intro {
+      margin-bottom: 24px;
+    }
+
+    .card {
+      background: white;
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+      padding: 26px;
+      margin-bottom: 22px;
+      box-shadow: 0 3px 12px rgba(0, 0, 0, 0.04);
+    }
+
+    fieldset {
+      border: 0;
+      margin: 0;
+      padding: 0;
+      min-width: 0;
+    }
+
+    legend {
+      font-size: 21px;
+      font-weight: bold;
+      margin-bottom: 18px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    label {
+      display: block;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    input,
+    select {
+      display: block;
+      width: 100%;
+      padding: 11px;
+      margin-top: 6px;
+      border: 1px solid #cbd5e1;
+      border-radius: 6px;
+      background: white;
+      font: inherit;
+      color: #172b4d;
+    }
+
+    input:focus,
+    select:focus {
+      outline: 2px solid #0d9488;
+      outline-offset: 1px;
+    }
+
+    .full {
+      grid-column: 1 / -1;
+    }
+
+    .checkbox-group {
+      display: grid;
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    .checkbox-group label {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-weight: 400;
+    }
+
+    .checkbox-group input {
+      width: auto;
+      margin: 4px 0 0;
+      accent-color: #0d9488;
+    }
+
+    button {
+      border: 0;
+      border-radius: 7px;
+      padding: 13px 22px;
+      background: #0d9488;
+      color: white;
+      font-size: 15px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #0f766e;
+    }
+
+    button:disabled {
+      opacity: 0.55;
+      cursor: not-allowed;
+    }
+
+    .secondary {
+      background: #334155;
+    }
+
+    .secondary:hover {
+      background: #1e293b;
+    }
+
+    .actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .status {
+      margin-top: 18px;
+      padding: 14px;
+      border-radius: 7px;
+      display: none;
+      white-space: pre-wrap;
+      overflow-wrap: anywhere;
+    }
+
+    .success {
+      display: block;
+      background: #dcfce7;
+      color: #166534;
+    }
+
+    .error {
+      display: block;
+      background: #fee2e2;
+      color: #991b1b;
+    }
+
+    .info {
+      display: block;
+      background: #dbeafe;
+      color: #1e40af;
+    }
+
+    .record {
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      padding: 16px;
+      margin-top: 12px;
+    }
+
+    .record p {
+      margin: 5px 0;
+      overflow-wrap: anywhere;
+    }
+
+    .muted {
+      color: #64748b;
+      font-size: 13px;
+    }
+
+    @media (max-width: 650px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      .card {
+        padding: 18px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>Energy System Database</h1>
+  <p>Generation System Registration Form</p>
+</header>
+
+<main>
+
+  <div class="intro">
+    <h2>Application for Low-Voltage Grid Connection</h2>
+    <p>
+      Enter the installation information below.
+    </p>
+  </div>
+
+  <form id="registrationForm">
+
+    <!-- SECTION 1: PLANT ADDRESS -->
+
+    <section class="card">
+      <fieldset>
+        <legend>1. Plant Address</legend>
+
+        <div class="grid">
+          <label>
+            First Name
+            <input name="address_first_name" required>
+          </label>
+
+          <label>
+            Last Name
+            <input name="address_last_name" required>
+          </label>
+
+          <label>
+            Street
+            <input name="address_street" required>
+          </label>
+
+          <label>
+            House Number
+            <input name="address_house_number" required>
+          </label>
+
+          <label>
+            Postcode
+            <input name="address_postal_code" required>
+          </label>
+
+          <label>
+            City
+            <input name="address_city" required>
+          </label>
+
+          <label>
+            Telephone
+            <input name="address_phone" type="tel">
+          </label>
+
+          <label>
+            Email
+            <input name="address_email" type="email">
+          </label>
+        </div>
+      </fieldset>
+    </section>
+
+
+    <!-- SECTION 2: PLANT OWNER -->
+
+    <section class="card">
+      <fieldset>
+        <legend>2. Plant Owner</legend>
+
+        <div class="grid">
+          <label>
+            First Name
+            <input name="owner_first_name" required>
+          </label>
+
+          <label>
+            Last Name
+            <input name="owner_last_name" required>
+          </label>
+
+          <label>
+            Street
+            <input name="owner_street" required>
+          </label>
+
+          <label>
+            House Number
+            <input name="owner_house_number" required>
+          </label>
+
+          <label>
+            Postcode
+            <input name="owner_postal_code" required>
+          </label>
+
+          <label>
+            City
+            <input name="owner_city" required>
+          </label>
+
+          <label>
+            Telephone
+            <input name="owner_phone" type="tel">
+          </label>
+
+          <label>
+            Email
+            <input name="owner_email" type="email">
+          </label>
+        </div>
+      </fieldset>
+    </section>
+
+
+    <!-- SECTION 3: PLANT OPERATOR -->
+
+    <section class="card">
+      <fieldset>
+        <legend>3. Plant Operator</legend>
+
+        <div class="grid">
+          <label>
+            First Name
+            <input name="operator_first_name" required>
+          </label>
+
+          <label>
+            Last Name
+            <input name="operator_last_name" required>
+          </label>
+
+          <label>
+            Street
+            <input name="operator_street" required>
+          </label>
+
+          <label>
+            House Number
+            <input name="operator_house_number" required>
+          </label>
+
+          <label>
+            Postcode
+            <input name="operator_postal_code" required>
+          </label>
+
+          <label>
+            City
+            <input name="operator_city" required>
+          </label>
+
+          <label>
+            Telephone
+            <input name="operator_phone" type="tel">
+          </label>
+
+          <label>
+            Email
+            <input name="operator_email" type="email">
+          </label>
+        </div>
+      </fieldset>
+    </section>
+
+
+    <!-- SECTION 4: INSTALLER -->
+
+    <section class="card">
+      <fieldset>
+        <legend>4. System Installer</legend>
+
+        <p class="muted">
+          Specialist electrical company
+        </p>
+
+        <div class="grid">
+          <label>
+            Company Name
+            <input name="installer_company_name" required>
+          </label>
+
+          <label>
+            Place / City
+            <input name="installer_city" required>
+          </label>
+
+          <label class="full">
+            Registration Number with Network Operator
+            <input name="installer_registration_number" required>
+          </label>
+        </div>
+      </fieldset>
+    </section>
+
+
+    <!-- SECTION 5: APPLICATION -->
+
+    <section class="card">
+      <fieldset>
+        <legend>5. Application Details</legend>
+
+        <label>
+          System Type
+          <select name="system_type" required>
+            <option value="New construction">
+              New Construction
+            </option>
+            <option value="Extension">
+              Extension
+            </option>
+            <option value="Dismantling">
+              Dismantling
+            </option>
+          </select>
+        </label>
+
+        <h3>Document Checklist</h3>
+
+        <div class="checkbox-group">
+
+          <label>
+            <input
+              type="checkbox"
+              name="grid_application_attached"
+            >
+            Application for grid connection enclosed
+          </label>
+
+          <label>
+            <input
+              type="checkbox"
+              name="site_plan_attached"
+            >
+            Site plan with property boundaries
+            and generation system location attached
+          </label>
+
+          <label>
+            <input
+              type="checkbox"
+              name="data_sheet_attached"
+            >
+            Generating plant data sheet attached (E.2)
+          </label>
+
+          <label>
+            <input
+              type="checkbox"
+              name="unit_certificate_available"
+            >
+            Unit certificates in accordance with
+            VDE-AR-N 4105 / 4110 available
+          </label>
+
+          <label>
+            <input
+              type="checkbox"
+              name="na_certificate_attached"
+            >
+            NA protection certificate enclosed (E.6)
+          </label>
+
+          <label>
+            <input
+              type="checkbox"
+              name="power_flow_certificate_attached"
+            >
+            Power flow monitoring certificate enclosed,
+            if required
+          </label>
+
+          <label>
+            <input
+              type="checkbox"
+              name="circuit_diagram_attached"
+            >
+            Overview circuit diagram attached,
+            including measuring and protective devices
+          </label>
+
+        </div>
+
+        <div style="margin-top: 24px">
+          <label>
+            Planned Commissioning Date
+            <input
+              type="date"
+              name="planned_commissioning_date"
+              required
+            >
+          </label>
+        </div>
+      </fieldset>
+    </section>
+
+
+    <!-- SUBMIT BUTTON -->
+
+    <section class="card">
+      <h2>Submit Registration</h2>
+
+      <button id="submitButton" type="submit">
+        Submit Application
+      </button>
+
+      <div id="status" class="status" role="status"></div>
+    </section>
+
+  </form>
+
+
+  <!-- SAVED APPLICATIONS -->
+
+  <section class="card">
+    <h2>Saved Applications</h2>
+    
+    <div class="actions">
+      <button
+        type="button"
+        class="secondary"
+        id="refreshButton"
+      >
+        Refresh Applications
+      </button>
+    </div>
+
+    <div id="applicationsList"></div>
+  </section>
+
+</main>
+
+
+<script>
+  const form = document.getElementById('registrationForm');
+  const statusBox = document.getElementById('status');
+  const submitButton = document.getElementById('submitButton');
+  const refreshButton = document.getElementById('refreshButton');
+  const applicationsList =
+    document.getElementById('applicationsList');
+
+
+
+  function showStatus(message, type = 'info') {
+    statusBox.textContent = message;
+    statusBox.className = 'status ' + type;
+  }
+
+
+  // Send JSON to one of our NestJS POST endpoints
+  async function postData(endpoint, data) {
+    const response = await fetch(endpoint, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(data)
+    });
+
+    const result = await response.json().catch(() => null);
+
+    if (!response.ok) {
+      const errorMessage = Array.isArray(result?.message)
+        ? result.message.join(', ')
+        : result?.message || response.statusText;
+
+      throw new Error(endpoint + ': ' + errorMessage);
+    }
+
+    if (!result?.id) {
+      throw new Error(endpoint + ': No UUID returned');
+    }
+
+    return result;
+  }
+
+
+  // Convert the form's person fields to a database object
+  function personData(formData, prefix) {
+    return {
+      first_name: formData.get(prefix + '_first_name').trim(),
+      last_name: formData.get(prefix + '_last_name').trim(),
+      street: formData.get(prefix + '_street').trim(),
+      house_number: formData.get(prefix + '_house_number').trim(),
+      postal_code: formData.get(prefix + '_postal_code').trim(),
+      city: formData.get(prefix + '_city').trim(),
+      phone: formData.get(prefix + '_phone').trim(),
+      email: formData.get(prefix + '_email').trim()
+    };
+  }
+
+
+  // Handle the full application submission
+  form.addEventListener('submit', async (event) => {
+    event.preventDefault();
+
+    if (!form.reportValidity()) {
+      return;
+    }
+
+    submitButton.disabled = true;
+
+    const formData = new FormData(form);
+    const completedSteps = [];
+
+    try {
+
+      showStatus('Saving plant owner...');
+
+      const owner = await postData(
+        '/plant-owners',
+        personData(formData, 'owner')
+      );
+
+      completedSteps.push('Plant owner');
+
+
+      showStatus('Saving plant operator...');
+
+      const operator = await postData(
+        '/plant-operators',
+        personData(formData, 'operator')
+      );
+
+      completedSteps.push('Plant operator');
+
+
+      showStatus('Saving installer...');
+
+      const installer = await postData(
+        '/installers',
+        {
+          company_name:
+            formData.get('installer_company_name').trim(),
+          city:
+            formData.get('installer_city').trim(),
+          registration_number:
+            formData.get('installer_registration_number').trim()
+        }
+      );
+
+      completedSteps.push('Installer');
+
+
+      showStatus('Saving plant address...');
+
+      const address = await postData(
+        '/plant-addresses',
+        personData(formData, 'address')
+      );
+
+      completedSteps.push('Plant address');
+
+
+      showStatus('Linking records and saving application...');
+
+      const applicationData = {
+        owner_id: owner.id,
+        operator_id: operator.id,
+        installer_id: installer.id,
+        plant_address_id: address.id,
+
+        system_type: formData.get('system_type'),
+
+        grid_application_attached:
+          formData.has('grid_application_attached'),
+
+        site_plan_attached:
+          formData.has('site_plan_attached'),
+
+        data_sheet_attached:
+          formData.has('data_sheet_attached'),
+
+        unit_certificate_available:
+          formData.has('unit_certificate_available'),
+
+        na_certificate_attached:
+          formData.has('na_certificate_attached'),
+
+        power_flow_certificate_attached:
+          formData.has('power_flow_certificate_attached'),
+
+        circuit_diagram_attached:
+          formData.has('circuit_diagram_attached'),
+
+        planned_commissioning_date:
+          formData.get('planned_commissioning_date')
+      };
+
+      const application = await postData(
+        '/applications',
+        applicationData
+      );
+
+      completedSteps.push('Application');
+
+
+      showStatus(
+        'Application saved successfully!\n' +
+        'Application ID: ' + application.id,
+        'success'
+      );
+
+      form.reset();
+
+      await loadApplications();
+
+    } catch (error) {
+
+      showStatus(
+        'Submission failed: ' + error.message +
+        '\nAlready saved: ' +
+        (completedSteps.join(', ') || 'None') +
+        '\nSome records may already exist in PostgreSQL. ' +
+        'Check them before submitting again.',
+        'error'
+      );
+
+    } finally {
+      submitButton.disabled = false;
+    }
+  });
+
+
+  // GET all saved applications
+  async function loadApplications() {
+    applicationsList.textContent = 'Loading applications...';
+
+    try {
+      const response = await fetch('/applications');
+
+      if (!response.ok) {
+        throw new Error('GET /applications failed');
+      }
+
+      const applications = await response.json();
+
+      applicationsList.replaceChildren();
+
+      if (!Array.isArray(applications) || applications.length === 0) {
+        applicationsList.textContent = 'No applications yet.';
+        return;
+      }
+
+      applications.forEach((app) => {
+        const record = document.createElement('div');
+        record.className = 'record';
+
+        const title = document.createElement('h3');
+        title.textContent =
+          app.system_type || 'Application';
+
+        record.appendChild(title);
+
+        const details = [
+          ['Application ID', app.id],
+          [
+            'Owner',
+            [
+              app.owner?.first_name,
+              app.owner?.last_name
+            ].filter(Boolean).join(' ') || app.owner_id
+          ],
+          [
+            'Operator',
+            [
+              app.operator?.first_name,
+              app.operator?.last_name
+            ].filter(Boolean).join(' ') || app.operator_id
+          ],
+          [
+            'Installer',
+            app.installer?.company_name || app.installer_id
+          ],
+          [
+            'Plant Address',
+            [
+              app.plant_address?.street,
+              app.plant_address?.house_number,
+              app.plant_address?.city
+            ].filter(Boolean).join(', ') || app.plant_address_id
+          ],
+          [
+            'Planned Commissioning',
+            app.planned_commissioning_date
+          ]
+        ];
+
+        details.forEach(([label, value]) => {
+          const paragraph = document.createElement('p');
+          const strong = document.createElement('strong');
+
+          strong.textContent = label + ': ';
+          paragraph.appendChild(strong);
+          paragraph.appendChild(
+            document.createTextNode(value ?? 'Not specified')
+          );
+
+          record.appendChild(paragraph);
+        });
+
+        applicationsList.appendChild(record);
+      });
+
+    } catch (error) {
+      applicationsList.textContent =
+        'Could not load applications: ' + error.message;
+    }
+  }
+
+
+  refreshButton.addEventListener('click', loadApplications);
+
+  // Load saved applications when the homepage opens
+  loadApplications();
+</script>
+
+</body>
+</html>

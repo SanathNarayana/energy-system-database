@@ -1,0 +1,17 @@
+node_modules/
+dist/
+*.tsbuildinfo
+.DS_Store
+*.log
+coverage/
+.env
+.env.*
+!.env.example
+
+# The application package is in backend.
+/package.json
+/package-lock.json
+
+# Local assistant instructions and NestJS starter documentation.
+/backend/AGENTS.md
+/backend/README.md
